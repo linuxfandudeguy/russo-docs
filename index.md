@@ -2,123 +2,115 @@
 layout: default
 ---
 
-### Preview Page Types
-[Listing Pages](samples/listings-page)
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-There should be whitespace between paragraphs.
+# Russo.js
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Russo is a lightweight JavaScript library that provides transliteration and conversion between the Cyrillic and Latin alphabets. It uses the ISO 9 standard for transliteration, ensuring consistency and accuracy. The library is written using ESM (ECMAScript Modules) and bundled as UMD (Universal Module Definition), making it compatible with various environments, including browsers, ES6 modules, and CommonJS.
 
-# [](#header-1)Header 1
+**Repository**: https://github.com/linuxfandudeguy/russo.js
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Table of Contents
+	1.	Installation
+	2.	Usage
+	•	Browser
+	•	ES6 Modules
+	•	CommonJS
+	3.	API Reference
+	4.	Inspiration
+	5.	License
 
-## [](#header-2)Header 2
+## Installation
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+You can install Russo via its Git URL using NPM:
 
-### [](#header-3)Header 3
+### Using NPM
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+```bash
+npm install git+https://github.com/linuxfandudeguy/russo.js
 ```
+Browser Use
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+If you want to use the library directly in the browser, you can include it via the following URL:
 
-#### [](#header-4)Header 4
+https://linuxfandudeguy.github.io/russo.js/prod/bundle.js
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+Example:
 
-##### [](#header-5)Header 5
+<script src="https://linuxfandudeguy.github.io/russo.js/prod/bundle.js"></script>
+<script>
+  console.log(Russo.transliterate("Москва")); // "Moskva"
+</script>
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+Why Download Locally?
 
-###### [](#header-6)Header 6
+If you need to maintain a specific version of the library, it is recommended to download it locally. This ensures that the library will not change if the hosted URL is updated.
+The decision to avoid hosting separate files for each change is to prevent the repository from taking up excessive space. Hosting multiple versions for every small change would make repository management inefficient and overly complex.
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+ESM and UMD Compatibility
 
-### There's a horizontal rule below this.
+Russo is written using ESM (ECMAScript Modules) for modern JavaScript development and bundled using UMD (Universal Module Definition). This allows it to work in a variety of environments:
+	•	Browser: Include the script via a <script> tag and access the Russo object globally.
+	•	ES6 Modules: Import the library using import.
+	•	CommonJS: Require the library using require for Node.js or other CommonJS environments.
 
-* * *
+Features
 
-### Here is an unordered list:
+1. ISO 9 Transliteration
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+Russo uses the ISO 9 standard for transliteration, ensuring precise mapping between Cyrillic and Latin characters.
+	•	Cyrillic to Latin: Russo.transliterate converts Cyrillic text to ISO 9 Latin text.
+	•	Latin to Cyrillic: Russo.toRussian converts Latin text back to Cyrillic.
 
-### And an ordered list:
+Usage
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+1. Browser
 
-### And a nested list:
+Include the library in your HTML file. The Russo object will be globally accessible.
 
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+<script src="https://linuxfandudeguy.github.io/russo.js/prod/bundle.js"></script>
+<script>
+  console.log(Russo.transliterate("Москва")); // "Moskva"
+</script>
 
-### Small image
+2. ES6 Modules
 
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+Import the library into your project using ES6 syntax:
 
-### Large image
+import Russo from "russo";
+console.log(Russo.toRussian("Privet")); // "Привет"
 
-![](https://guides.github.com/activities/hello-world/branching.png)
+3. CommonJS
 
+Require the library in a Node.js or CommonJS environment:
 
-### Definition lists can be used with HTML syntax.
+const Russo = require("russo");
+console.log(Russo.transliterate("Привет")); // "Privet"
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+API Reference
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+Russo.transliterate(input: string): string
 
-```
-The final element.
-```
+Converts a string of Cyrillic characters to their Latin transliterated equivalents using the ISO 9 system.
+	•	Parameters:
+input (string) – The string containing Cyrillic characters to transliterate.
+	•	Returns:
+A string with Latin transliterated characters.
+
+Russo.toRussian(input: string): string
+
+Converts a string of Latin characters to their Cyrillic equivalents using the ISO 9 system.
+	•	Parameters:
+input (string) – The string containing Latin characters to convert to Cyrillic.
+	•	Returns:
+A string with Cyrillic characters.
+
+Inspiration
+
+The Russo library was inspired by aromanize.js, a library primarily focused on transliterating Japanese and Korean scripts. The inspiration for Russo comes from the desire to create a similar library, but for Cyrillic and Latin alphabets, while maintaining the high standards of transliteration accuracy.
+
+Additionally, Russo was developed as an opportunity to explore ESM (ECMAScript Modules), outside of web development, and to create something that could be used across multiple environments, including both browser and server-side environments. The library uses ISO 9 to ensure that the transliteration process is consistent and reliable.
+
+License
+
+This library is licensed under the MIT License. Feel free to use and modify it as needed.
