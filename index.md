@@ -8,7 +8,7 @@ layout: default
 
 Russo is a lightweight JavaScript library that provides transliteration and conversion between the Cyrillic and Latin alphabets. It uses the ISO 9 standard for transliteration, ensuring consistency and accuracy. The library is written using ESM (ECMAScript Modules) and bundled as UMD (Universal Module Definition), making it compatible with various environments, including browsers, ES6 modules, and CommonJS.
 
-**Repository**: https://github.com/linuxfandudeguy/russo.js
+**Repository**: [russo.js on GitHub](https://github.com/linuxfandudeguy/russo.js)
 
 Table of Contents
 	1.	Installation
