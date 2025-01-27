@@ -3,16 +3,16 @@ title: Russo.js
 tagline: With Russo.js, it’s easy for you!
 description: Russian Cyrillic transliteration library using ISO 9.
 url: https://linuxfandudeguy.github.io/russo-docs/
-logo: https://draculatheme.com/static/icons/pack-1/045-dracula.svg
+logo: ./assets/images/index.txt.png
 
 # Google Analytics ID
 google_analytics:
 
 # GitHub Values
 github:
-  owner_name: Dracula
-  owner_url: https://github.com/dracula
-  repository_url: https://github.com/dracula/gh-pages
+  owner_name: linuxfandudeguy
+  owner_url: https://github.com/linuxfandudeguy
+  repository_url: https://github.com/linuxfandudeguy/durokotter
 
 show_downloads: true
 show_header: true
