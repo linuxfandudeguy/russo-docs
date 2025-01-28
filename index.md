@@ -117,7 +117,7 @@ Converts a string of Latin characters to their Cyrillic equivalents using the IS
 
 ## Inspiration
 
-The Russo library was inspired by aromanize.js, a library primarily focused on transliterating various languages. The inspiration for Russo comes from the desire to create a similar library, but for Cyrillic and Latin alphabets, while maintaining the high standards of transliteration accuracy.
+The Russo library was inspired by [aromanize-js](https://github.com/fujaru/aromanize-js/tree/master), a library primarily focused on transliterating various languages. The inspiration for Russo comes from the desire to create a similar library, but for Cyrillic and Latin alphabets, while maintaining the high standards of transliteration accuracy.
 
 Additionally, Russo was developed as an opportunity to explore ESM (ECMAScript Modules), outside of web development, and to create something that could be used across multiple environments, including both browser and server-side environments. The library uses ISO 9 to ensure that the transliteration process is consistent and reliable.
 
